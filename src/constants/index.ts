@@ -8,7 +8,7 @@ export const PROFILE = {
     linkedin: "https://linkedin.com/in/monafea01",
     kaggle: "https://kaggle.com/mohamednafea01",
     summary: "Result-oriented AI Engineer specializing in Generative AI and complex Computer Vision systems. Proven expertise in architecting production-ready, event-driven solutions with FastAPI, Docker, MLOps tools, and Cloud Solutions. Proficient in Python, TensorFlow, PyTorch, LangChain, and other relevant technologies.",
-    resumeLink: "/Mohamed_Nafea.pdf"
+    resumeLink: "/portfolio/Mohamed_Nafea.pdf"
 };
 
 export const EDUCATION = [
