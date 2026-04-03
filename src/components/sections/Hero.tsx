@@ -21,7 +21,7 @@ export const Hero = () => {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-4">
-                    <a href="#projects">
+                    <a href="#experience">
                         <Button size="lg" className="h-11 px-8">
                             View Work <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>

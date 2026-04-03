@@ -7,7 +7,7 @@ export const PROFILE = {
     github: "https://github.com/MoNafea01",
     linkedin: "https://linkedin.com/in/monafea01",
     kaggle: "https://kaggle.com/mohamednafea01",
-    summary: "Result-oriented AI Engineer specializing in Generative AI and complex Computer Vision systems. Proven expertise in architecting production-ready, event-driven solutions with FastAPI, Docker, MLOps tools, and Cloud Solutions. Proficient in Python, TensorFlow, PyTorch, LangChain, and other relevant technologies.",
+    summary: "Result-oriented AI Engineer specialized in Generative AI systems. Proven expertise in designing production-ready AI solutions with FastAPI, Docker, MLOps tools, and Microsoft Cloud solutions. Proficient in Python, TensorFlow, PyTorch, LangChain, and related technologies.",
     resumeLink: "/portfolio/Mohamed_Nafea.pdf"
 };
 
@@ -22,14 +22,25 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
     {
-        role: "Research Assistant",
-        company: "Remote (UTD PhD supervision)",
-        period: "Dec 2024 – Nov 2025",
-        type: "Part-time",
+        role: "AI & Backend Engineer",
+        company: "MMIT",
+        period: "Dec 2025 – Present",
+        type: "Full-time | Remote",
         description: [
+            "Built the backend of an AI system using FastAPI, Pydantic, and SQLAlchemy with a layered architecture for scalability and maintainability.",
+            "Deployed an AI-powered Smart Archive using LangGraph, LlamaIndex, and DSPy with Qdrant and PostgreSQL.",
+            "Containerized and orchestrated services with Docker and Docker Compose, deployed behind Nginx for request routing."
+        ]
+    },
+    {
+        role: "Research Assistant",
+        company: "Brownian Labs",
+        period: "Dec 2024 – Nov 2025",
+        type: "Part-time | Remote",
+        description: [
+            "Preprocessed input data with spatio-temporal cropping and segmentation to prepare robust flow-field training data.",
             "Implemented a Physics-Informed DDIM for enhancing low-resolution flow field by using PDE-guided constraints.",
-            "Designed a hybrid loss function combining MSE for the denoising objective with a PDE Residual Loss term.",
-            "Preprocessed the input data by applying spatio-temporal segmentation, cropping, and resizing of flow field videos."
+            "Designed a hybrid loss function combining MSE and PDE residual constraints to enforce Navier-Stokes consistency."
         ]
     },
     {
@@ -40,8 +51,7 @@ export const EXPERIENCE = [
         description: [
             "Developed a Face Recognition system with human feedback and version-controlled embeddings.",
             "Designed system logic enabling multiple embedding approaches and adaptive user updates.",
-            "Built robust registration and verification pipelines, improving handling of uncentered, multiple, or missing faces.",
-            "Achieved 87.2% accuracy score on LFW dataset using deep learning and computer vision techniques."
+            "Achieved 87.2% accuracy on the LFW dataset using deep learning and computer vision techniques."
         ]
     }
 ];
@@ -49,17 +59,18 @@ export const EXPERIENCE = [
 export const PROJECTS = [
     {
         title: "Mini-RAG",
-        subtitle: "Production-Grade RAG System",
-        period: "Nov 2025 – Dec 2025",
+        subtitle: "A minimal production-grade RAG system",
+        period: "Nov 2025 – Feb 2026",
         links: {
             code: "https://github.com/MoNafea01/mini-rag",
             demo: "https://github.com/MoNafea01/mini-rag"
         },
         description: [
-            "Built a RAG system integrating FastAPI, LangChain, and multiple Vector DBs (Qdrant, PGVector).",
-            "Designed an event-driven architecture using RabbitMQ and Celery for large-scale document parsing."
+            "Built a RAG system with FastAPI and LangChain, supporting dynamic switching between Postgres and MongoDB with multiple LLM providers and vector stores.",
+            "Optimized high-volume ingestion using asynchronous parsing and embedding tasks with Celery, RabbitMQ, and Redis.",
+            "Deployed robust infrastructure with Docker Compose and Nginx and added observability using Prometheus and Grafana."
         ],
-        stack: ["FastAPI", "LangChain", "Postgres", "MongoDB", "Qdrant", "Docker", "Redis", "Celery"]
+        stack: ["FastAPI", "LangChain", "Postgres", "MongoDB", "Qdrant", "Docker", "Celery", "Redis", "Prometheus", "Grafana", "Nginx", "RabbitMQ"]
     },
     {
         title: "AINO",
@@ -71,18 +82,21 @@ export const PROJECTS = [
             demo: "https://www.youtube.com/watch?v=el-Ggeef4ZM"
         },
         description: [
-            "Designed the Overall Software Architecture (Service & Repository Layers).",
-            "Implemented Backend using Django RESTful framework.",
-            "Created a file conversion script for AINOPRJ format."
-        ],
-        stack: ["Django", "PostgreSQL", "FastAPI", "Uvicorn", "Pydantic"]
+            "Designed the system architecture (Service and Repository layers) for modular AI node interaction using DRF.",
+            "Created a file conversion script for AINOPRJ format.",
+            "Developed a multi-Agent AI solution capable of interacting with user & pipelines execution via a CLI tool.",
+            "Implemented a custom CLI tool supporting full CRUD operations that communicates with backend server.",
+            "Led the team as Project Leader, managing development progress and task distribution."
+            ],
+        stack: ["Django", "REST API", "PostgreSQL", "FastAPI", "Uvicorn", "Pydantic", "LangChain", "Gradio", "Scikit-Learn", "NumPy", "Pandas", "TensorFlow", "Keras", "OpenCV"]
     },
     {
         title: "LLM Fine-tuning",
         subtitle: "Structured Metadata Extraction",
         period: "Nov 2025 – Dec 2025",
         links: {
-            code: "https://colab.research.google.com/drive/171LmPJCTPSa7UmZrZLci1z3u1AWjByJ8#scrollTo=Wkigp2KPVgqU"
+            code: "https://colab.research.google.com/drive/171LmPJCTPSa7UmZrZLci1z3u1AWjByJ8#scrollTo=Wkigp2KPVgqU",
+            demo: "https://huggingface.co/spaces/MoNafea01/news-analyzer"
         },
         description: [
             "Fine-Tuned Qwen2.5:1.5b using QLoRA via LLaMA-Factory to extract metadata from news articles.",
@@ -90,6 +104,21 @@ export const PROJECTS = [
             "Validated system performance with Locust stress tests."
         ],
         stack: ["LLaMA-Factory", "vLLM", "PyTorch", "Wandb", "Qwen", "Locust"]
+    },
+    {
+        title: "LiveKit Saudi End-of-Utterance Detector",
+        subtitle: "EOU detection for Saudi Arabic",
+        period: "Oct 2025 – Dec 2025",
+        links: {
+            code: "https://github.com/MoNafea01",
+            demo: "https://huggingface.co/spaces/MoNafea01/Saudi-Eou-AraBERT"
+        },
+        description: [
+            "Engineered an end-of-utterance detector optimized for Saudi Arabic and fine-tuned AraBERT with LoRA for efficient sequence classification.",
+            "Developed a custom LiveKit turn detector plugin that infers EOU probabilities from conversation context.",
+            "Curated a custom Saudi EOU dataset, tracked experiments with Weights and Biases, and shipped an interactive Gradio demo."
+        ],
+        stack: ["LiveKit", "Hugging Face", "PyTorch", "AraBERT", "Gradio", "Wandb", "pytest"]
     },
     {
         title: "Garbage Classifier",
@@ -133,19 +162,20 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-    "Languages": ["Python", "Java", "C", "MATLAB", "SQL"],
-    "Core CS": ["Data Structures", "OOP", "Design Patterns"],
-    "Data & Viz": ["NumPy", "Pandas", "Matplotlib", "Seaborn"],
-    "ML/DL": ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"],
-    "AI Libraries": ["OpenCV", "YOLO", "NLTK", "Hugging Face", "LangChain"],
-    "MLOps": ["Docker", "RabbitMQ", "MLflow", "Prometheus", "Azure AI"],
-    "Backend": ["FastAPI", "Django", "PostgreSQL", "MongoDB", "Redis"]
+    "SWE": ["OS", "SQL", "Algorithms", "Data Structures", "Computer Networks", "Computer Organization", "OOP", "Python", "Java", "C", "MATLAB"],
+    "DS & ML": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn", "TensorFlow", "PyTorch", "Keras"],
+    "AI & LLM Frameworks": ["LangChain", "LangGraph", "DSPy", "LlamaIndex", "Hugging Face", "LLaMA-Factory", "OpenCV", "YOLO"],
+    "Backend & Databases": ["FastAPI", "Django", "PostgreSQL", "MongoDB", "Qdrant", "Redis"],
+    "MLOps & Infrastructure": ["Azure AI Foundry", "Docker", "RabbitMQ", "Nginx", "MLflow", "Gradio", "Prometheus", "Wandb"],
+    "Tools": ["Microsoft Azure", "VS Code", "Postman", "Git", "GitHub", "Google Colab"],
+    "Soft Skills": ["Research", "Leadership", "Problem Solving", "Communication", "Time Management", "Critical Thinking"],
+    "Languages": ["Arabic (Native)", "English (Fluent)"]
 };
 
 export const CERTIFICATES = [
     { name: "Microsoft Certified: Azure AI Engineer Associate", date: "Dec 2025 - Dec 2026", link: "https://learn.microsoft.com/api/credentials/share/en-us/MohamedKamalHosniNafea/828B411E89303CD5?sharingId=2880F06DA7588263" },
-    { name: "IBM Artificial Intelligence Engineer Path", date: "May 2025", link: "https://www.coursera.org/account/accomplishments/badge/3nnHyPZvTC65x8j2bzwuvQ" },
+    { name: "Deep Learning with PyTorch, Keras and TensorFlow | IBM", date: "Feb 2026", link: "https://www.coursera.org/account/accomplishments/badge/3nnHyPZvTC65x8j2bzwuvQ" },
     { name: "Generative AI Specialist | DEPI", date: "Oct 2024", link: "https://drive.google.com/file/d/1-neR1ttcKSpuLF-93OO0uVTMUWNsUfNv" },
-    { name: "Supervised Machine Learning | DeepLearning.AI", date: "Aug 2023", link: "https://www.coursera.org/account/accomplishments/certificate/5Q24UMGEYFN2" },
-    { name: "Machine Learning for Data Analysis | NTI", date: "Jul 2024", link: "https://drive.google.com/file/d/19Ac0qndmPRCPjriHbQ4eugyEBfrcNMDZ" }
+    { name: "Machine Learning | NTI", date: "Jul 2024", link: "https://drive.google.com/file/d/19Ac0qndmPRCPjriHbQ4eugyEBfrcNMDZ" },
+    { name: "Supervised Machine Learning | DeepLearning.AI", date: "Aug 2023", link: "https://www.coursera.org/account/accomplishments/certificate/5Q24UMGEYFN2" }
 ];
