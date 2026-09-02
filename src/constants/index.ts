@@ -1,13 +1,13 @@
 export const PROFILE = {
     name: "Mohamed K. Nafea",
-    title: "AI Engineer",
+    title: "Backend & AI Engineer",
     email: "monafe301@gmail.com",
     phone: "+20 1129330746",
-    location: "Zagazig, Egypt",
+    location: "Cairo, Egypt",
     github: "https://github.com/MoNafea01",
     linkedin: "https://linkedin.com/in/monafea01",
     kaggle: "https://kaggle.com/mohamednafea01",
-    summary: "Result-oriented AI Engineer specialized in Generative AI systems. Proven expertise in designing production-ready AI solutions with FastAPI, Docker, MLOps tools, and Microsoft Cloud solutions. Proficient in Python, TensorFlow, PyTorch, LangChain, and related technologies.",
+    summary: "Backend & AI Engineer with ~2 years building and deploying end-to-end Generative-AI systems: agentic RAG, LLM fine-tuning (LoRA/QLoRA), and the FastAPI / Celery / Docker infrastructure to serve them. Built an Arabic-first real-estate search engine across 12+ containerized services and led a 3-engineer team delivering a SaaS EdTech platform. Top 10 of 200+ at the Egypt IoT & AI Challenge. Microsoft Certified: Azure AI Engineer Associate.",
     resumeLink: "/portfolio/Mohamed_Nafea.pdf"
 };
 
@@ -22,73 +22,102 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
     {
-        role: "AI & Backend Engineer",
-        company: "MMIT",
-        period: "Dec 2025 – Present",
-        type: "Full-time | Remote",
+        role: "Software Engineer",
+        company: "Rashdan Information Technology",
+        period: "Apr 2026 – Sep 2026",
+        type: "Full-time | On-site",
         description: [
-            "Built the backend of an AI system using FastAPI, Pydantic, and SQLAlchemy with a layered architecture for scalability and maintainability.",
-            "Deployed an AI-powered Smart Archive using LangGraph, LlamaIndex, and DSPy with Qdrant and PostgreSQL.",
-            "Containerized and orchestrated services with Docker and Docker Compose, deployed behind Nginx for request routing."
+            "Led a 3-engineer team delivering a SaaS EdTech platform for live student–instructor tutoring; owned task breakdown, code review, and the full SDLC from stakeholder requirements gathering through design, development, testing, and production deployment.",
+            "Designed the ERD and relational data model (MSSQL, EF6, ~30 entities) and evolved the schema as the business model changed, replacing enum constants with lookup tables to enforce referential integrity.",
+            "Re-architected the application into a layered design with validation/DTO and dedicated data-access layers, lifting business and query logic out of UI code-behind onto a shared per-request DB context.",
+            "Built the live-session video pipeline on the Zoom API with event-driven ZAK token generation at join time and an admin-managed pool of licensed accounts.",
+            "Developed the booking, cancellation, and refund engine: tiered >24h vs. <24h cancellation rules with a 20% platform commission, late-join handling, a dispute-management workflow, and instructor payout capture."
+        ]
+    },
+    {
+        role: "AI & Backend Engineer",
+        company: "Masarat Almustakshef",
+        period: "Dec 2025 – Jun 2026",
+        type: "Part-time | Remote",
+        description: [
+            "Architected the backend of Nawafiz AI, an Arabic-first real-estate knowledge & smart search engine, using FastAPI, Pydantic, and SQLAlchemy with a clean layered architecture.",
+            "Designed and implemented a Celery, RabbitMQ, and Redis task-queue system for heavy background workflows.",
+            "Developed an Agentic RAG pipeline with LangGraph and DSPy, using Qdrant for dense vector retrieval and PostgreSQL for structured data and document storage.",
+            "Built an Arabic-first entity resolution system using LLM-generated aliases stored in PostgreSQL, with Redis for fuzzy matching of compound names and cities.",
+            "Designed the observability stack (Langfuse for LLM tracing, Prometheus and Grafana for system metrics) and containerized 12+ services with Docker Compose behind an Nginx reverse proxy."
         ]
     },
     {
         role: "Research Assistant",
         company: "Brownian Labs",
         period: "Dec 2024 – Nov 2025",
-        type: "Part-time | Remote",
+        type: "Research Group | Remote",
         description: [
-            "Preprocessed input data with spatio-temporal cropping and segmentation to prepare robust flow-field training data.",
-            "Implemented a Physics-Informed DDIM for enhancing low-resolution flow field by using PDE-guided constraints.",
-            "Designed a hybrid loss function combining MSE and PDE residual constraints to enforce Navier-Stokes consistency."
+            "Preprocessed input data with spatio-temporal cropping to prepare it for the deep learning model.",
+            "Implemented a Physics-Informed DDIM for enhancing low-resolution flow fields using PDE-guided constraints.",
+            "Designed a hybrid loss function combining MSE with a PDE residual to keep the model consistent with Navier-Stokes physics."
         ]
     },
     {
         role: "AI Engineer",
         company: "IDentFace",
         period: "Aug 2024 – Nov 2024",
-        type: "Part-time | Remote",
+        type: "Freelance | Remote",
         description: [
-            "Developed a Face Recognition system with human feedback and version-controlled embeddings.",
-            "Designed system logic enabling multiple embedding approaches and adaptive user updates.",
-            "Achieved 87.2% accuracy on the LFW dataset using deep learning and computer vision techniques."
+            "Developed a face recognition system with human-in-the-loop feedback and version-controlled embeddings.",
+            "Designed system logic enabling multiple embedding approaches and adaptive user updates; achieved 87.2% accuracy on the LFW dataset."
         ]
     }
 ];
 
 export const PROJECTS = [
     {
-        title: "Mini-RAG",
-        subtitle: "A minimal production-grade RAG system",
+        title: "AINO",
+        subtitle: "Node-Based Machine Learning Workflow Platform",
+        period: "Nov 2024 – Present",
+        award: "Top 10 at Egypt IoT & AI Challenge",
+        links: {
+            code: "https://github.com/MoNafea01/AI-NO",
+            demo: "https://www.youtube.com/watch?v=el-Ggeef4ZM"
+        },
+        description: [
+            "Architected a decoupled, high-performance execution engine using FastAPI for CRUD operations and Celery/RabbitMQ for heavy background computation, reducing main API thread blocking to 0%.",
+            "Engineered an optimized DAG executor that resolves node dependencies via topological sorting, with concurrent execution of nodes within the same topological level.",
+            "Developed a custom state-hashing execution cache for incremental workflow resumption, plus a version-control system supporting undo/redo and restore.",
+            "Created a proprietary encrypted project format (.ainoprj) to secure and commercialize workflow distribution.",
+            "Engineered a multi-agent system integrated with the backend APIs via an MCP tool to build pipelines and execute tasks."
+        ],
+        stack: ["FastAPI", "Celery", "RabbitMQ", "Redis", "PostgreSQL", "SQLAlchemy", "Docker Compose", "Nginx", "Scikit-Learn", "Keras", "TensorFlow"]
+    },
+    {
+        title: "LiveKit Saudi End-of-Utterance Detector",
+        subtitle: "EOU detection for Saudi Arabic",
+        period: "Oct 2025 – Dec 2025",
+        links: {
+            code: "https://github.com/MoNafea01",
+            demo: "https://huggingface.co/spaces/MoNafea01/Saudi-Eou-AraBERT"
+        },
+        description: [
+            "Engineered an end-of-utterance detection system optimized for the Saudi Arabic dialect; fine-tuned AraBERT with LoRA for efficient, accurate sequence classification.",
+            "Developed a custom LiveKit turn-detector plugin that infers EOU probabilities from conversation context.",
+            "Curated a custom Saudi EOU dataset, tracked training experiments with Weights & Biases, and deployed an interactive Gradio demo on Hugging Face Spaces."
+        ],
+        stack: ["LiveKit", "Hugging Face", "PyTorch", "AraBERT", "Groq", "Cartesia", "Gradio", "Wandb", "pytest"]
+    },
+    {
+        title: "Backend-Agnostic RAG System",
+        subtitle: "Pluggable Storage & LLM Providers",
         period: "Nov 2025 – Feb 2026",
         links: {
             code: "https://github.com/MoNafea01/mini-rag",
             demo: "https://github.com/MoNafea01/mini-rag"
         },
         description: [
-            "Built a RAG system with FastAPI and LangChain, supporting dynamic switching between Postgres and MongoDB with multiple LLM providers and vector stores.",
-            "Optimized high-volume ingestion using asynchronous parsing and embedding tasks with Celery, RabbitMQ, and Redis.",
-            "Deployed robust infrastructure with Docker Compose and Nginx and added observability using Prometheus and Grafana."
+            "Refactored a fixed RAG stack into a fully backend-agnostic design: abstracted the document store (MongoDB / PostgreSQL) and vector store (Qdrant / pgvector) behind independent interfaces, making all four combinations switchable from one config file with zero code change.",
+            "Extended the LLM-provider abstraction with a Groq adapter alongside OpenAI / Ollama / Cohere, keeping a single call interface across all four.",
+            "Deployed with Docker Compose, using Celery, Redis, and RabbitMQ for asynchronous parsing and embedding."
         ],
-        stack: ["FastAPI", "LangChain", "Postgres", "MongoDB", "Qdrant", "Docker", "Celery", "Redis", "Prometheus", "Grafana", "Nginx", "RabbitMQ"]
-    },
-    {
-        title: "AINO",
-        subtitle: "No Code Platform for AI Development",
-        period: "Nov 2024 – Aug 2025",
-        award: "Top 10 at Egypt IOT & AI Challenge",
-        links: {
-            code: "https://github.com/MoNafea01/AI-NO",
-            demo: "https://www.youtube.com/watch?v=el-Ggeef4ZM"
-        },
-        description: [
-            "Designed the system architecture (Service and Repository layers) for modular AI node interaction using DRF.",
-            "Created a file conversion script for AINOPRJ format.",
-            "Developed a multi-Agent AI solution capable of interacting with user & pipelines execution via a CLI tool.",
-            "Implemented a custom CLI tool supporting full CRUD operations that communicates with backend server.",
-            "Led the team as Project Leader, managing development progress and task distribution."
-            ],
-        stack: ["Django", "REST API", "PostgreSQL", "FastAPI", "Uvicorn", "Pydantic", "LangChain", "Gradio", "Scikit-Learn", "NumPy", "Pandas", "TensorFlow", "Keras", "OpenCV"]
+        stack: ["FastAPI", "Postgres", "MongoDB", "Qdrant", "pgvector", "Docker", "Celery", "Redis", "RabbitMQ"]
     },
     {
         title: "LLM Fine-tuning",
@@ -104,21 +133,6 @@ export const PROJECTS = [
             "Validated system performance with Locust stress tests."
         ],
         stack: ["LLaMA-Factory", "vLLM", "PyTorch", "Wandb", "Qwen", "Locust"]
-    },
-    {
-        title: "LiveKit Saudi End-of-Utterance Detector",
-        subtitle: "EOU detection for Saudi Arabic",
-        period: "Oct 2025 – Dec 2025",
-        links: {
-            code: "https://github.com/MoNafea01",
-            demo: "https://huggingface.co/spaces/MoNafea01/Saudi-Eou-AraBERT"
-        },
-        description: [
-            "Engineered an end-of-utterance detector optimized for Saudi Arabic and fine-tuned AraBERT with LoRA for efficient sequence classification.",
-            "Developed a custom LiveKit turn detector plugin that infers EOU probabilities from conversation context.",
-            "Curated a custom Saudi EOU dataset, tracked experiments with Weights and Biases, and shipped an interactive Gradio demo."
-        ],
-        stack: ["LiveKit", "Hugging Face", "PyTorch", "AraBERT", "Gradio", "Wandb", "pytest"]
     },
     {
         title: "Garbage Classifier",
@@ -162,20 +176,19 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-    "SWE": ["OS", "SQL", "Algorithms", "Data Structures", "Computer Networks", "Computer Organization", "OOP", "Python", "Java", "C", "MATLAB"],
-    "DS & ML": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn", "TensorFlow", "PyTorch", "Keras"],
-    "AI & LLM Frameworks": ["LangChain", "LangGraph", "DSPy", "LlamaIndex", "Hugging Face", "LLaMA-Factory", "OpenCV", "YOLO"],
-    "Backend & Databases": ["FastAPI", "Django", "PostgreSQL", "MongoDB", "Qdrant", "Redis"],
-    "MLOps & Infrastructure": ["Azure AI Foundry", "Docker", "RabbitMQ", "Nginx", "MLflow", "Gradio", "Prometheus", "Wandb"],
-    "Tools": ["Microsoft Azure", "VS Code", "Postman", "Git", "GitHub", "Google Colab"],
-    "Soft Skills": ["Research", "Leadership", "Problem Solving", "Communication", "Time Management", "Critical Thinking"],
+    "Programming Languages": ["Python", "C#", "SQL"],
+    "AI & LLM": ["LangGraph", "LangChain", "DSPy", "RAG & Agentic RAG", "Multi-Agent Systems", "MCP", "Hugging Face", "LLaMA-Factory", "Fine-tuning (LoRA/QLoRA)", "Prompt Engineering", "vLLM"],
+    "Machine Learning": ["PyTorch", "TensorFlow/Keras", "Scikit-Learn", "NumPy", "Pandas", "Diffusion Models"],
+    "Backend & Data": ["FastAPI", "REST API Design", "SQLAlchemy", "Pydantic", "Celery", "PostgreSQL", "MongoDB", "Redis", "Qdrant/pgvector", "MSSQL", ".NET/EF6"],
+    "Infra & MLOps": ["Docker & Compose", "Nginx", "RabbitMQ", "CI/CD (GitHub Actions)", "Prometheus", "Grafana", "Langfuse", "Wandb", "Azure"],
+    "Practices": ["System Design", "Git", "Testing (pytest)", "Agile", "Code Review", "Team Leadership"],
     "Languages": ["Arabic (Native)", "English (Fluent)"]
 };
 
 export const CERTIFICATES = [
-    { name: "Microsoft Certified: Azure AI Engineer Associate", date: "Dec 2025 - Dec 2026", link: "https://learn.microsoft.com/api/credentials/share/en-us/MohamedKamalHosniNafea/828B411E89303CD5?sharingId=2880F06DA7588263" },
-    { name: "Deep Learning with PyTorch, Keras and TensorFlow | IBM", date: "Feb 2026", link: "https://www.coursera.org/account/accomplishments/badge/3nnHyPZvTC65x8j2bzwuvQ" },
+    { name: "Microsoft Certified: Azure AI Engineer Associate", date: "Dec 2025 – Dec 2026", link: "https://learn.microsoft.com/api/credentials/share/en-us/MohamedKamalHosniNafea/828B411E89303CD5?sharingId=2880F06DA7588263" },
+    { name: "AI Engineer Path | IBM", date: "Jan 2026", link: "https://www.coursera.org/account/accomplishments/badge/3nnHyPZvTC65x8j2bzwuvQ" },
     { name: "Generative AI Specialist | DEPI", date: "Oct 2024", link: "https://drive.google.com/file/d/1-neR1ttcKSpuLF-93OO0uVTMUWNsUfNv" },
-    { name: "Machine Learning | NTI", date: "Jul 2024", link: "https://drive.google.com/file/d/19Ac0qndmPRCPjriHbQ4eugyEBfrcNMDZ" },
+    { name: "ML Engineer | NTI", date: "Sep 2024", link: "https://drive.google.com/file/d/19Ac0qndmPRCPjriHbQ4eugyEBfrcNMDZ" },
     { name: "Supervised Machine Learning | DeepLearning.AI", date: "Aug 2023", link: "https://www.coursera.org/account/accomplishments/certificate/5Q24UMGEYFN2" }
 ];
