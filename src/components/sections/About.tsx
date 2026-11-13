@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const About = () => {
     const stats = [
-        { icon: Briefcase, label: "Experience", value: "2+ Years" },
+        { icon: Briefcase, label: "Industry & Research", value: "2 Years" },
         { icon: Code2, label: "Projects", value: "10+" },
         { icon: GraduationCap, label: "Education", value: "B.Eng." },
         { icon: MapPin, label: "Location", value: "Egypt" },
@@ -69,7 +69,6 @@ export const About = () => {
                                             <p className="text-primary font-medium">{edu.school}</p>
                                             <div className="flex flex-wrap gap-4 mt-2 text-sm text-muted-foreground">
                                                 <span>{edu.period}</span>
-                                                <span className="font-semibold text-foreground">GPA: {edu.gpa}</span>
                                             </div>
                                         </div>
                                     </div>

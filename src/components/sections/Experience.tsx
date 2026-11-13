@@ -40,14 +40,30 @@ export const Experience = () => {
                                         </div>
                                     </div>
 
-                                    {/* Description */}
+                                    {/* Project */}
+                                    {job.project && (
+                                        <p className="text-sm font-medium text-foreground/80 mt-2">{job.project}</p>
+                                    )}
+
+                                    {/* Description: "Headline: sentence" renders the headline in bold */}
                                     <ul className="space-y-3 mt-6">
-                                        {job.description.map((desc, i) => (
-                                            <li key={i} className="flex items-start gap-3">
-                                                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                                                <span className="text-muted-foreground leading-relaxed">{desc}</span>
-                                            </li>
-                                        ))}
+                                        {job.description.map((desc, i) => {
+                                            const cut = desc.indexOf(": ");
+                                            const hasHeadline = cut > 0 && cut <= 60;
+                                            return (
+                                                <li key={i} className="flex items-start gap-3">
+                                                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                                                    <span className="text-muted-foreground leading-relaxed">
+                                                        {hasHeadline ? (
+                                                            <>
+                                                                <span className="font-semibold text-foreground">{desc.slice(0, cut)}</span>
+                                                                {desc.slice(cut)}
+                                                            </>
+                                                        ) : desc}
+                                                    </span>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </div>
                             </CardContent>
