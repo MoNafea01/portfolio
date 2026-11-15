@@ -7,7 +7,7 @@ export const PROFILE = {
     github: "https://github.com/MoNafea01",
     linkedin: "https://linkedin.com/in/monafea01",
     kaggle: "https://kaggle.com/mohamednafea01",
-    summary: "Backend & AI Engineer with ~1 year of industry experience building Generative-AI and backend systems for startups, plus a year of applied deep-learning research. Hands-on with agentic RAG, LLM fine-tuning (LoRA/QLoRA), and Arabic NLP and voice, on FastAPI / Celery / RabbitMQ / Redis infrastructure. As the sole engineer, built an Arabic-first real-estate search engine across 12+ containerized services, and built a SaaS EdTech platform end to end before leading a 3-engineer team to deliver it. Top 10 finalist out of 200+ projects at the Egypt IoT & AI Challenge. Microsoft Certified: Azure AI Engineer Associate.",
+    summary: "Backend & AI Engineer with ~1 year of industry experience building Generative-AI and backend systems for startups, plus a year of applied deep-learning research. Hands-on with agentic RAG, LLM fine-tuning (LoRA/QLoRA), and Arabic NLP and voice, on FastAPI / Celery / RabbitMQ / Redis infrastructure. Built an Arabic-first real-estate search engine across 12+ containerized services, and built a SaaS EdTech platform end to end before leading a 3-engineer team to deliver it. Top 10 finalist out of 200+ projects at the Egypt IoT & AI Challenge. Microsoft Certified: Azure AI Engineer Associate.",
     resumeLink: "/portfolio/Mohamed_Nafea.pdf"
 };
 
@@ -28,7 +28,7 @@ export const EXPERIENCE = [
         type: "Full-time | On-site, Cairo",
         project: "RiseAcademy | EdTech SaaS platform for live student–instructor tutoring",
         description: [
-            "Sole Engineer, Then Team Lead: Built the platform alone for most of the project, then expanded to a 3-engineer team and led it through the final month to meet the delivery deadline.",
+            "Built the Platform End to End: Worked as the sole engineer for most of the project, then expanded to a 3-engineer team and led it through the final month to meet the delivery deadline.",
             "Owned the Full SDLC: Task breakdown, code review, and delivery from requirements gathering to production deployment.",
             "Built the Platform Full-Stack: Developed the ASP.NET Web Forms front end (user-facing pages and admin screens) together with the backend, owning features from the UI to the database.",
             "Designed the Relational Data Model: Modeled ~30 entities (MSSQL, EF6) and evolved the schema with the business, replacing enum constants with lookup tables to enforce referential integrity.",
