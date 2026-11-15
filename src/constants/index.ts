@@ -25,7 +25,7 @@ export const EXPERIENCE = [
         role: "Software Engineer",
         company: "Rashdan Information Technology",
         period: "Apr 2026 – Sep 2026",
-        type: "Full-time | On-site, Cairo",
+        type: "Full-time | Hybrid, Cairo",
         project: "RiseAcademy | EdTech SaaS platform for live student–instructor tutoring",
         description: [
             "Built the Platform End to End: Worked as the sole engineer for most of the project, then expanded to a 3-engineer team and led it through the final month to meet the delivery deadline.",
