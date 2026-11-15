@@ -7,7 +7,7 @@ export const PROFILE = {
     github: "https://github.com/MoNafea01",
     linkedin: "https://linkedin.com/in/monafea01",
     kaggle: "https://kaggle.com/mohamednafea01",
-    summary: "Backend & AI Engineer with ~1 year of industry experience building Generative-AI and backend systems for startups, plus a year of applied deep-learning research. Hands-on with agentic RAG, LLM fine-tuning (LoRA/QLoRA), and Arabic NLP and voice, on FastAPI / Celery / RabbitMQ / Redis infrastructure. Built an Arabic-first real-estate search engine across 12+ containerized services and led a 3-engineer team delivering a SaaS EdTech platform. Top 10 finalist out of 200+ projects at the Egypt IoT & AI Challenge. Microsoft Certified: Azure AI Engineer Associate.",
+    summary: "Backend & AI Engineer with ~1 year of industry experience building Generative-AI and backend systems for startups, plus a year of applied deep-learning research. Hands-on with agentic RAG, LLM fine-tuning (LoRA/QLoRA), and Arabic NLP and voice, on FastAPI / Celery / RabbitMQ / Redis infrastructure. As the sole engineer, built an Arabic-first real-estate search engine across 12+ containerized services, and built a SaaS EdTech platform end to end before leading a 3-engineer team to deliver it. Top 10 finalist out of 200+ projects at the Egypt IoT & AI Challenge. Microsoft Certified: Azure AI Engineer Associate.",
     resumeLink: "/portfolio/Mohamed_Nafea.pdf"
 };
 
@@ -28,7 +28,8 @@ export const EXPERIENCE = [
         type: "Full-time | On-site, Cairo",
         project: "RiseAcademy | EdTech SaaS platform for live student–instructor tutoring",
         description: [
-            "Led End-to-End Platform Delivery: Headed a 3-engineer team; owned task breakdown, code review, and the full SDLC from requirements gathering to production deployment.",
+            "Sole Engineer, Then Team Lead: Built the platform alone for most of the project, then expanded to a 3-engineer team and led it through the final month to meet the delivery deadline.",
+            "Owned the Full SDLC: Task breakdown, code review, and delivery from requirements gathering to production deployment.",
             "Built the Platform Full-Stack: Developed the ASP.NET Web Forms front end (user-facing pages and admin screens) together with the backend, owning features from the UI to the database.",
             "Designed the Relational Data Model: Modeled ~30 entities (MSSQL, EF6) and evolved the schema with the business, replacing enum constants with lookup tables to enforce referential integrity.",
             "Re-Architected into a Layered Design: Added validation/DTO and data-access layers, lifting business and query logic out of UI code-behind onto a shared per-request DB context.",
@@ -43,7 +44,7 @@ export const EXPERIENCE = [
         type: "Contract | Remote (Saudi Arabia)",
         project: "Nawafiz AI | AI-Powered Real Estate Knowledge & Smart Search Engine",
         description: [
-            "Architected the Backend & Task Queue: Built the FastAPI, Pydantic, and SQLAlchemy backend on a layered architecture, with a Celery, RabbitMQ, and Redis queue for heavy background workflows.",
+            "Architected the Backend & Task Queue: As the sole engineer, built the FastAPI, Pydantic, and SQLAlchemy backend on a layered architecture, with a Celery, RabbitMQ, and Redis queue for heavy background workflows.",
             "Developed an Agentic RAG Pipeline: Combined LangGraph and DSPy with Qdrant for dense vector retrieval and PostgreSQL for structured data and document storage.",
             "Built Arabic-First Entity Resolution: Used LLM-generated aliases stored in PostgreSQL, with Redis for fuzzy matching of compound names and cities.",
             "Designed the Observability Stack: Langfuse for LLM tracing, Prometheus and Grafana for system metrics.",
@@ -86,7 +87,7 @@ export const PROJECTS = [
             demo: "https://www.youtube.com/watch?v=el-Ggeef4ZM"
         },
         description: [
-            "Decoupled execution engine using FastAPI for CRUD operations and Celery/RabbitMQ for heavy background computations, reducing main API thread blocking to 0%. Selected among the Top 10 finalists out of 200+ graduation projects at the Egypt IoT & AI Challenge.",
+            "Decoupled execution engine using FastAPI for CRUD operations and Celery/RabbitMQ for heavy background computations, keeping them off the main API thread. Selected among the Top 10 finalists out of 200+ graduation projects at the Egypt IoT & AI Challenge.",
             "Concurrent DAG executor that resolves node dependencies via Topological Sorting and runs nodes of the same topological level concurrently.",
             "Custom state-hashing execution cache that lets workflows resume incrementally, plus workflow version control with Undo/Redo and Restore.",
             "Proprietary encrypted project format (.ainoprj) to secure and commercialize workflow distribution.",
