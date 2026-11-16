@@ -22,6 +22,21 @@ export const EDUCATION = [
 // Each description line is "Headline: sentence". The Experience section renders the headline in bold.
 export const EXPERIENCE = [
     {
+        role: "Software & AI Engineer",
+        company: "LuqmanAI",
+        period: "Sep 2026 – Nov 2026",
+        type: "Freelance | Remote",
+        project: "LuqmanAI | Real-Time Arabic Voice AI Agent Platform (luqmanai.com)",
+        description: [
+            "Built the Voice-Agent Tool-Calling Layer: Owned the Database Tools Workflow that lets the Arabic voice agent (Gemini Live + Speechmatics) run real CRUD operations on backend records through declared tool contracts (no LLM-generated SQL), with schema-strict extraction via OpenAI Structured Outputs and server-side validation of permissions, references, and values.",
+            "Designed a Stateful LangGraph Workflow: Runs on Redis (registry, sync checkpoints, per-session lease), keeps an isolated request per user goal, links each utterance to open requests, and pauses/resumes for missing info.",
+            "Enabled Multi-Goal Requests: Dependencies derived from field contracts, the dependent request pre-extracted while waiting, then executed with the record ID returned by the first.",
+            "Built the Call-Termination Pipeline: Moved blocking end-of-call work off the request path with Celery, RabbitMQ, Redis, and PostgreSQL, so users no longer wait for a call to close.",
+            "Evaluated Cost, Latency & Accuracy: Compared the design against 6 alternatives (Text-to-SQL, direct function calling, PostgresSaver, ...), projecting ~60% lower extraction cost via small-model routing with escalation.",
+            "Tested the Workflow End to End: Covered extraction, association, evidence repair, number confirmation, and voice interfaces with 263 pytest cases."
+        ]
+    },
+    {
         role: "Software Engineer",
         company: "Rashdan Information Technology",
         period: "Apr 2026 – Sep 2026",
