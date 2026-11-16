@@ -41,7 +41,7 @@ export const EXPERIENCE = [
         company: "Rashdan Information Technology",
         period: "Apr 2026 – Sep 2026",
         type: "Full-time | Hybrid, Cairo",
-        project: "RiseAcademy | EdTech SaaS platform for live student–instructor tutoring",
+        project: "RiseAcademy | EdTech SaaS platform for live student–instructor tutoring (risedu.co)",
         description: [
             "Built the Platform End to End: Worked as the sole engineer for most of the project, then expanded to a 3-engineer team and led it through the final month to meet the delivery deadline.",
             "Owned the Full SDLC: Task breakdown, code review, and delivery from requirements gathering to production deployment.",
