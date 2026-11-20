@@ -13,8 +13,8 @@ export const PROFILE = {
 
 export const EDUCATION = [
     {
-        degree: "B.Eng. Computer & Systems Engineering",
-        school: "Zagazig University",
+        degree: "B.Sc. Computer & Systems Engineering",
+        school: "Faculty of Engineering, Zagazig University",
         period: "Oct 2020 – Jul 2025"
     }
 ];
